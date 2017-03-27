@@ -13,7 +13,7 @@
     </p>
     <p class="topic"><?php echo $article->getTitle();?></p>
     <br>
-    <p class=""><?php echo $article>getLead();?></p>
+    <p class=""><?php echo $article->getLead();?></p>
     <br>
 </div>
 </body>
