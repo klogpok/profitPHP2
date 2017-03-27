@@ -1,0 +1,40 @@
+#wrapper{
+	
+	width: 570px;
+	margin: 0 auto;
+	padding: 10px;
+	
+	text-align: justify;
+}
+
+#wrapper > div{
+	margin-bottom: 15px;
+}
+
+#wrapper p{
+	margin-bottom: 5px;
+}
+
+#wrapper h1 {
+    color: #23527C;
+}
+
+#wrapper a {
+    text-decoration: none;
+}
+
+.subheader, .date{
+	font-weight: bold;
+}
+
+.topic{
+	font-size: 16pt;
+}
+
+.desc{
+	font-size: 12pt;
+}
+
+.title{
+	font-size: 16pt;
+}
