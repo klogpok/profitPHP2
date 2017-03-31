@@ -1,9 +1,7 @@
 <?php
 
-require_once __DIR__.'/functions.php';
+require_once __DIR__ . '/protected/autoload.php';
 
-$cause = ' ORDER BY id DESC LIMIT 3';
-
-$articles = Article::findAll($cause);
+$articles = \models\Article::getFewArticles('DESC', 3);
 
 include __DIR__.'/templates/index.php';
