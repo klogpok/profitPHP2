@@ -23,11 +23,4 @@ class Article extends Model
     {
         return $this->lead;
     }
-
-    public static function getFewArticles($sort = 'ASC', $limit = 0) {
-
-        $db = new \Db();
-        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY id ' . $sort . ' LIMIT ' . $limit;
-        return $db->query($sql, static::class);
-    }
 }

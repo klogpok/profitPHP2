@@ -8,6 +8,7 @@
 <body>
 
 <div id="wrapper">
+    <a href="./Admin/admin.php">Admin panel</a>
     <br>
 
     <?php foreach($articles as $article) : ?>

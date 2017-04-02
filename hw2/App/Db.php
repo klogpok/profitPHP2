@@ -2,11 +2,13 @@
 
 class Db
 {
+    use Singleton;
+
     protected $dbh;
 
-    public function __construct()
+    protected function __construct()
     {
-        $configs = new \Config();
+        $configs = \Config::instance();
         $this->dbh = new \PDO('mysql:host='.$configs->data['db']['host'].';dbname='.$configs->data['db']['db_name'],
             $configs->data['db']['user'], $configs->data['db']['password']);
     }

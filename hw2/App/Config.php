@@ -2,10 +2,12 @@
 
 class Config
 {
+    use Singleton;
+
     public $data;
 
-    public function __construct()
+    protected function __construct()
     {
-        $this->data['db'] = parse_ini_file(__DIR__.'/config/config.ini');
+        return $this->data['db'] = parse_ini_file(__DIR__.'/config/config.ini');
     }
 }
