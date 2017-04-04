@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Oleg-Note
- * Date: 4/2/2017
- * Time: 05:16
- */
+
+require_once __DIR__ . '/../App/autoload.php';
+
+if (isset($_GET['delete'])) {
+
+    \Models\Article::deleteItemById($_GET['delete']);
+    header('Location: ./admin.php');
+}

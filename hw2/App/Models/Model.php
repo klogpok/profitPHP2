@@ -69,7 +69,7 @@ abstract class Model
                             ')';
 
         $db = \Db::instance();
-        $db->execute($sql, $data);
+        return $db->execute($sql, $data);
     }
 
     public function update() {
@@ -87,18 +87,18 @@ abstract class Model
                         ' WHERE id = :id';
 
         $db = \Db::instance();
-        $db->execute($sql, $data);
+        return $db->execute($sql, $data);
     }
 
     public function save() {
 
         if (null === $this->id) {
 
-            $this->insert();
+            return $this->insert();
 
         } else {
 
-            $this->update();
+            return $this->update();
         }
     }
 }
