@@ -10,9 +10,8 @@ class Db
         $this->dbh = new PDO('mysql:host=localhost;dbname=test', 'root', '');
     }
 
-    public function query($sql, string $class, array $params = [], string $cause = '')
+    public function query($sql, string $class, array $params = [])
     {
-        $sql .= $cause;
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($params);
 

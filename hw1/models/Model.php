@@ -6,10 +6,10 @@ abstract class Model
 
     public $id;
 
-    public static function findAll($cause)
+    public static function findAll()
     {
         $db = new Db;
-        $sql = 'SELECT * FROM ' . static::TABLE . $cause;
+        $sql = 'SELECT * FROM ' . static::TABLE;
         return $db->query($sql, static::class);
     }
 
