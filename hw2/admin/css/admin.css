@@ -1,0 +1,68 @@
+#wrapper{
+
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+
+    text-align: justify;
+}
+
+#wrapper > div{
+    margin-bottom: 15px;
+}
+
+#wrapper p{
+    margin-bottom: 5px;
+}
+
+#wrapper h1 {
+    color: #23527C;
+}
+
+#wrapper a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.subheader, .date{
+    font-weight: bold;
+}
+
+.topic{
+    font-size: 16pt;
+}
+
+.desc{
+    font-size: 12pt;
+}
+
+.title{
+    font-size: 16pt;
+}
+
+.tbl1 {
+    margin: 30px auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl1 th, tr,td {
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+    text-align: center;
+}
+
+#wrapper form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#wrapper form label {
+    text-align: center;
+}
+
+#wrapper form textarea {
+    margin: 10px ;
+}
+

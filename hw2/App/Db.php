@@ -2,12 +2,15 @@
 
 class Db
 {
+    use Singleton;
 
     protected $dbh;
 
-    public function __construct()
+    protected function __construct()
     {
-        $this->dbh = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+        $configs = \Config::instance();
+        $this->dbh = new \PDO('mysql:host='.$configs->data['db']['host'].';dbname='.$configs->data['db']['db_name'],
+            $configs->data['db']['user'], $configs->data['db']['password']);
     }
 
     public function query($sql, string $class, array $params = [])
@@ -18,7 +21,8 @@ class Db
         if (false === $res) {
             return false;
         } else {
-            return $sth->fetchAll(PDO::FETCH_CLASS, $class);
+            $data = $sth->fetchAll(PDO::FETCH_CLASS, $class);
+            return $data;
         }
     }
 
@@ -30,7 +34,7 @@ class Db
         if(false === $res) {
             return false;
         } else {
-            return true;
+            return $this->dbh->lastInsertId();
         }
     }
 }

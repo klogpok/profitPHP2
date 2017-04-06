@@ -1,7 +1,8 @@
 <?php
 
-class Article
-    extends Model
+namespace Models;
+
+class Article extends Model
 {
     const TABLE = 'news';
 
